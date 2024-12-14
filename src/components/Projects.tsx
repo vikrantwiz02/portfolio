@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
                       </Button>
                       <Button variant="secondary" size="sm" asChild>
                         <a href={project.live} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                          <ExternalLink className="mr-2 h-4 w-4" /> Demo
                         </a>
                       </Button>
                     </div>
