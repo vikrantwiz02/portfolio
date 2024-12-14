@@ -22,7 +22,7 @@ interface Achievement {
 
 const achievements: Achievement[] = [
   {
-    title: 'Google Cybersecurity Professional Certificate',
+    title: 'Google Cybersecurity Professional',
     description: 'Completed comprehensive cybersecurity program covering various aspects of digital security.',
     mainCertificate: {
       title: 'Google Cybersecurity Professional',
@@ -82,7 +82,7 @@ const achievements: Achievement[] = [
     ],
   },
   {
-    title: 'Google IT Support Certificate',
+    title: 'Google IT Support',
     description: 'Completed comprehensive program that equips learners with foundational IT skills, including troubleshooting, networking, operating systems, system administration, and IT security, preparing them for entry-level IT support roles.',
     mainCertificate: {
       title: 'Google IT Support',
@@ -123,6 +123,114 @@ const achievements: Achievement[] = [
       },
     ],
   },
+  {
+    title: 'The Complete Mobile Ethical Hacking',
+    description: 'Completed a comprehensive program that teaches mobile ethical hacking, covering penetration testing, security vulnerabilities, and app protection techniques using industry tools.',
+    mainCertificate: {
+      title: 'The Complete Mobile Ethical Hacking',
+      issuer: 'EC-Council',
+      date: 'Dec 2024',
+      image: '/thecompletemobileethicalhacking.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'EC-Council',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'End-to-End Mobile Security',
+    description: 'Completed a comprehensive program that covers mobile security from start to finish, focusing on app security, penetration testing, malware analysis, and securing mobile networks using industry-standard tools.',
+    mainCertificate: {
+      title: 'End-to-End Mobile Security',
+      issuer: 'EC-Council',
+      date: 'Dec 2024',
+      image: '/endtoendmobilesecurity.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'EC-Council',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Practical Internet of Things Hacking',
+    description: 'Completed a hands-on program that focuses on IoT security, including penetration testing, vulnerability assessment, and exploiting weaknesses in IoT devices and networks using practical tools and techniques.',
+    mainCertificate: {
+      title: 'Practical Internet of Things Hacking',
+      issuer: 'EC-Council',
+      date: 'Dec 2024',
+      image: '/practicalinternetofthings.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'EC-Council',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Foundation of Hacking and Pentesting Android Apps',
+    description: 'Completed a foundational program on hacking and penetration testing of Android apps, covering security vulnerabilities, exploit techniques, and securing mobile applications against attacks.',
+    mainCertificate: {
+      title: 'Poundation of Hacking and Pentesting Android Apps',
+      issuer: 'EC-Council',
+      date: 'Dec 2024',
+      image: '/foundationofhacking.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'EC-Council',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'The Complete Guide to Android Bug Bounty Penetration Tests',
+    description: 'Completed a comprehensive program on Android bug bounty penetration testing, focusing on identifying, exploiting, and reporting vulnerabilities in Android apps to earn bug bounties.',
+    mainCertificate: {
+      title: 'The Complete Guide to Android Bug Bounty Penetration Tests',
+      issuer: 'EC-Council',
+      date: 'Dec 2024',
+      image: '/bugbounty.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'EC-Council',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Hands-on Android Security',
+    description: 'Completed a practical program on Android security, covering vulnerability assessment, penetration testing, and securing Android apps from potential threats and exploits.',
+    mainCertificate: {
+      title: 'Hands-on Android Security',
+      issuer: 'EC-Council',
+      date: 'Dec 2024',
+      image: '/handsonsecurity.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'EC-Council',
+        date: '',
+        image: '',
+      },
+    ],
+  },
   // Add more achievements as needed
 ]
 
@@ -155,7 +263,7 @@ const AchievementCard: React.FC<{ achievement: Achievement }> = ({ achievement }
             <img 
               src={achievement.mainCertificate.image} 
               alt={achievement.mainCertificate.title} 
-              className="w-full h-40 object-cover rounded-md mb-2 cursor-pointer hover:opacity-80 transition-opacity duration-300"
+              className="w-full h-70 object-cover rounded-md mb-2 cursor-pointer hover:opacity-80 transition-opacity duration-300"
               onClick={() => openFullscreen(achievement.mainCertificate)}
             />
             <p className="text-sm text-gray-600 dark:text-gray-300">{achievement.mainCertificate.title} - {achievement.mainCertificate.issuer} ({achievement.mainCertificate.date})</p>
