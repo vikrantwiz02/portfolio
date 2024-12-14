@@ -21,7 +21,7 @@ const projects = [
     image: '/Saviour.png?height=200&width=300',
     tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
     github: 'https://github.com/vikrantwiz02/SAVIOUR',
-    live: 'https://cybersecurity-dashboard-demo.com',
+    live: 'https://drive.google.com/file/d/11MtDJCIcEl4Fgp5eM4wybGQ0oZBjyUvH/view?usp=sharing',
     type: 'web',
   },
   {

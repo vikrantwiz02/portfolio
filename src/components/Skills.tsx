@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Code, Shield } from 'lucide-react'
 
 const webDevSkills = [
-  'HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Tailwind CSS',
-  'Node.js', 'Express.js', 'MongoDB', 'Git', 'RESTful APIs', 'GraphQL'
+  'HTML', 'CSS', 'PHP', 'JavaScript', 'ReactJS', 'TypeScript', 'Tailwind CSS',
+  'Node.js', 'Git', 'MySQL'
 ]
 
 const cyberSecuritySkills = [
