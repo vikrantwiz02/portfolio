@@ -7,12 +7,12 @@ import { Github, ExternalLink, Code, Shield } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Secure E-commerce Platform',
-    description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB, implementing robust security measures.',
-    image: '/placeholder.svg?height=200&width=300',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Security'],
-    github: 'https://github.com/yourusername/secure-ecommerce-platform',
-    live: 'https://secure-ecommerce-platform-demo.com',
+    title: 'Army Arms Management System',
+    description: 'The Army Arms Management System (AAMS) streamlines the tracking, storage, and distribution of weapons, ammunition, and military equipment. It ensures accurate inventory, improves security, and optimizes logistics, supporting operational efficiency and readiness.',
+    image: '/aams.png?height=200&width=300',
+    tags: ['HTML', 'CSS', 'PHP', 'MySQL', 'Javascript'],
+    github: 'https://github.com/vikrantwiz02/army-arms-management-system',
+    live: 'https://drive.google.com/file/d/1HzdHZwedvgV14mAlRdgwKQu7aWzJY4ex/view?usp=sharing',
     type: 'web',
   },
   {
