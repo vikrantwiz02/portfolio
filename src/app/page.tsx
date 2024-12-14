@@ -10,6 +10,7 @@ import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import SocialLinks from '@/components/SocialLinks'
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
@@ -49,8 +50,9 @@ export default function Home() {
         <Skills />
         <Projects />
         <Achievements />
+        <Contact />
+        <SocialLinks />
       </main>
-      <Contact />
       <Footer />
     </div>
   )
