@@ -10,12 +10,14 @@ const Contact: React.FC = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('/backend/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,16 +26,29 @@ const Contact: React.FC = () => {
       });
   
       if (response.ok) {
-        alert('Message sent successfully!');
+        toast({
+          title: "Success",
+          description: "Message sent successfully!",
+        });
         setName('');
         setEmail('');
         setMessage('');
       } else {
-        alert('Failed to send message. Please try again.');
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      alert('An error occurred. Please try again later.');
+      toast({
+        title: "Error",
+        description: "An error occurred. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -78,8 +93,12 @@ const Contact: React.FC = () => {
                 required
                 className="bg-white/10 dark:bg-black/10 border-green-500/50 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400"
               />
-              <Button type="submit" className="w-full bg-green-500 hover:bg-green-600 text-white">
-                Send Message
+              <Button 
+                type="submit" 
+                className="w-full bg-green-500 hover:bg-green-600 text-white"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </CardContent>

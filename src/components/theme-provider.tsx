@@ -8,7 +8,7 @@ interface ThemeProviderProps {
     defaultTheme?: string; // Optional defaultTheme prop
     enableSystem?: boolean; // Optional enableSystem prop
 }
-
+    
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
     return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
