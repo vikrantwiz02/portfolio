@@ -1,15 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Code, Shield, Twitter, Globe } from 'lucide-react'
+import { Github, Linkedin, Code, Shield, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const socialLinks = [
-  { icon: Github, url: 'https://github.com/yourusername', label: 'GitHub' },
-  { icon: Linkedin, url: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-  { icon: Twitter, url: 'https://twitter.com/yourusername', label: 'Twitter' },
-  { icon: Code, url: 'https://stackoverflow.com/users/youruserid', label: 'Stack Overflow' },
-  { icon: Shield, url: 'https://tryhackme.com/p/yourusername', label: 'TryHackMe' },
-  { icon: Globe, url: 'https://yourblog.com', label: 'Personal Blog' },
+  { icon: Github, url: 'https://github.com/vikrantwiz02', label: 'GitHub' },
+  { icon: Linkedin, url: 'www.linkedin.com/in/vikrant-kumar-b37a18282', label: 'LinkedIn' },
 ]
 
 const SocialLinks: React.FC = () => {
