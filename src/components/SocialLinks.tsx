@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 const socialLinks = [
   { icon: Github, url: 'https://github.com/vikrantwiz02', label: 'GitHub' },
-  { icon: Linkedin, url: 'www.linkedin.com/in/vikrant-kumar-b37a18282', label: 'LinkedIn' },
+  { icon: Linkedin, url: 'https://www.linkedin.com/in/vikrant-kumar-b37a18282', label: 'LinkedIn' },
 ]
 
 const SocialLinks: React.FC = () => {
