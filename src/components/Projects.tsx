@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -37,6 +39,13 @@ const projects = [
 
 const Projects: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [clickedIndex, setClickedIndex] = useState<number | null>(null)
+
+  const handleImageClick = (index: number) => {
+    setClickedIndex(clickedIndex === index ? null : index)
+  }
+
+  const isOverlayVisible = (index: number) => hoveredIndex === index || clickedIndex === index
 
   return (
     <section id="projects" className="py-16">
@@ -63,13 +72,25 @@ const Projects: React.FC = () => {
                 <CardDescription className="text-gray-600 dark:text-gray-300">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="relative h-48 mb-4 overflow-hidden rounded-md">
+                <div 
+                  className="relative h-48 mb-4 overflow-hidden rounded-md cursor-pointer"
+                  onClick={() => handleImageClick(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      handleImageClick(index)
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Toggle ${project.title} project details`}
+                >
                   <img 
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
                   />
-                  {hoveredIndex === index && (
+                  {isOverlayVisible(index) && (
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                       <Button variant="secondary" size="sm" asChild className="mr-2">
                         <a href={project.github} target="_blank" rel="noopener noreferrer">
