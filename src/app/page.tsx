@@ -49,8 +49,8 @@ export default function Home() {
         <Skills />
         <Projects />
         <Achievements />
-        <Contact />
       </main>
+      <Contact />
       <Footer />
     </div>
   )
