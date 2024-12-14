@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         className="text-center z-10"
       >
         <motion.h1 
-          className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 text-gradient animate-float"
+          className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 text-gradient animate-float"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
