@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
             className="bg-blue-600 hover:bg-blue-700 text-white"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Explore My Work
+            Explore About Me & My Work
           </Button>
         </motion.div>
         <motion.div
