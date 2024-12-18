@@ -35,6 +35,24 @@ const projects = [
     live: 'https://drive.google.com/file/d/1YVGRA76clSaDif01R5Vq9LlGIXgC5mLH/view?usp=sharing',
     type: 'web',
   },
+  {
+    title: 'Saviour2.0',
+    description: 'Saviour is a technology-driven solution designed to save lives during natural disasters. It features real-time alerts, navigation assistance, resource availability tracking, user-to-user support, and offline communication. By integrating weather forecasting and innovative technologies, Saviour ensures timely information and aid to those in need, enhancing disaster preparedness and response.',
+    image: '/Saviour2.png?height=200&width=300',
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
+    github: 'https://github.com/vikrantwiz02/Saviour2',
+    live: 'https://saviour2-yrym.vercel.app/',
+    type: 'web',
+  },
+  {
+    title: 'Portfolio',
+    description: 'Vikrant Portfolio',
+    image: '/portfolio.png?height=200&width=300',
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
+    github: 'https://github.com/vikrantwiz02/portfolio',
+    live: 'https://vikrant-portfolio-kappa.vercel.app/',
+    type: 'web',
+  },
 ]
 
 const Projects: React.FC = () => {
