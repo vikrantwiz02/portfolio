@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: 'Portfolio',
-    description: 'Vikrant Portfolio',
+    description: 'My portfolio serves as a comprehensive showcase of my work, highlighting projects across web development and cybersecurity. It reflects my ability to create innovative solutions, combining creativity and technical expertise to solve real-world problems. Through this collection of projects, I aim to demonstrate my commitment to continuous learning and growth in the tech field.',
     image: '/portfolio.png?height=200&width=300',
     tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
     github: 'https://github.com/vikrantwiz02/portfolio',
