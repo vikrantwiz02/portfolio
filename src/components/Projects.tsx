@@ -55,7 +55,7 @@ const projects = [
   },
   {
     title: 'Magic Form Builder',
-    description: 'Magic Form Builder is a tool for designing forms with a real-time preview and generating ready-to-use code in various programming languages. It simplifies form creation by allowing users to build, edit, save, delete, and preview forms, making integration into projects seamless.',
+    description: 'Magic Form Builder is a dynamic tool for creating forms effortlessly, similar to Google Forms. It enables users to design forms through an intuitive interface, with a real-time preview feature to visualize how the final form will appear.  It simplifies form creation by allowing users to build, edit, save, delete, and preview forms, making integration into projects seamless.',
     image: '/magic-form-builder.png?height=200&width=300',
     tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
     github: 'https://github.com/vikrantwiz02/Magic-Form-Builder',
