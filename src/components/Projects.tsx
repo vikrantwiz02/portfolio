@@ -53,6 +53,15 @@ const projects = [
     live: 'https://vikrant-portfolio-kappa.vercel.app/',
     type: 'web',
   },
+  {
+    title: 'Magic Form Builder',
+    description: 'Magic Form Builder is a tool for designing forms with a real-time preview and generating ready-to-use code in various programming languages. It simplifies form creation by allowing users to build, edit, save, delete, and preview forms, making integration into projects seamless.',
+    image: '/magic-form-builder.png?height=200&width=300',
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
+    github: 'https://github.com/vikrantwiz02/Magic-Form-Builder',
+    live: '',
+    type: 'web',
+  },
 ]
 
 const Projects: React.FC = () => {
