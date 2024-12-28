@@ -8,9 +8,9 @@ import About from '@/components/About'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Achievements from '@/components/Achievements'
+import Badges from '@/components/Badges'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
-import Badges from '@/components/Badges'
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
@@ -44,7 +44,7 @@ export default function Home() {
         style={{ scaleX }}
       />
       <Header />
-      <main className="container mx-auto py-8 space-y-32 relative z-10">
+      <main className="container mx-auto px-4 py-8 space-y-32 relative z-10">
         <Hero />
         <About />
         <Skills />

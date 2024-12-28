@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         className="text-center z-10"
       >
         <motion.h1 
-          className="text-2xl sm:text-4xl md:text-6xl font-bold mb-6 text-gradient animate-float"
+          className="text-3xl sm:text-6xl md:text-7xl font-bold mb-6 text-gradient animate-float"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
             className="bg-blue-600 hover:bg-blue-700 text-white"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Explore About Me & My Work
+            Explore My Work
           </Button>
         </motion.div>
         <motion.div
@@ -54,3 +54,4 @@ const Hero: React.FC = () => {
 }
 
 export default Hero
+
