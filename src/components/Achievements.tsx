@@ -235,7 +235,7 @@ const achievements: Achievement[] = [
     title: 'AWS Cloud Practitioner Essentials',
     description: 'Completed the AWS Cloud Practitioner Essentials certificate, covering foundational knowledge of AWS services, cloud concepts, pricing models, and security best practices.',
     mainCertificate: {
-      title: 'WS Cloud Practitioner Essentials',
+      title: 'AWS Cloud Practitioner Essentials',
       issuer: 'AWS Training and Certification',
       date: 'Jan 2025',
       image: '/AWS Course Completion Certificate.jpg?height=200&width=300',
