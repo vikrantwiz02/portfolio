@@ -62,6 +62,15 @@ const projects = [
     live: '',
     type: 'web',
   },
+  {
+    title: 'Koinx Assessment',
+    description: 'Developed a responsive web app using React.js and TypeScript, integrating real-time cryptocurrency data from Coingecko APIs and interactive charts from TradingView. Delivered a production-grade project with dynamic components and a clean, scalable codebase.',
+    image: '/koinx.png?height=200&width=300',
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
+    github: 'https://github.com/vikrantwiz02/koinx',
+    live: 'https://koinx-iota-one.vercel.app/',
+    type: 'web',
+  },
 ]
 
 const Projects: React.FC = () => {
