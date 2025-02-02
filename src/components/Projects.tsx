@@ -39,9 +39,9 @@ const projects = [
     title: 'Saviour2.0',
     description: 'Saviour is a technology-driven solution designed to save lives during natural disasters. It features real-time alerts, navigation assistance, resource availability tracking, user-to-user support, and offline communication. By integrating weather forecasting and innovative technologies, Saviour ensures timely information and aid to those in need, enhancing disaster preparedness and response.',
     image: '/Saviour2.png?height=200&width=300',
-    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS','React.js','MongoDB'],
     github: 'https://github.com/vikrantwiz02/Saviour2',
-    live: 'https://saviour2-yrym.vercel.app/',
+    live: 'https://saviour-chi.vercel.app/',
     type: 'web',
   },
   {
@@ -60,6 +60,15 @@ const projects = [
     tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
     github: 'https://github.com/vikrantwiz02/Magic-Form-Builder',
     live: '',
+    type: 'web',
+  },
+  {
+    title: 'IIITDMJ Unofficial Website',
+    description: 'The IIITDMJ Unofficial Website is a fully responsive, full-stack project covering frontend, backend, and database storage. Designed to provide key insights into academics, campus life, and events, this independent platform ensures seamless accessibility and engagement for students and aspirants.',
+    image: '/iiitdmj-website.png?height=200&width=300',
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS','Next.js','MongoDB','Clerk'],
+    github: 'https://github.com/vikrantwiz02/iiitdmj-website',
+    live: 'https://iiitdmj-ten.vercel.app/',
     type: 'web',
   },
   {

@@ -249,6 +249,24 @@ const achievements: Achievement[] = [
       },
     ],
   },
+  {
+    title: 'Accenture UK - Developer and Technology Job Simulation',
+    description: 'Certified in Accenture UK - Developer and Technology Job Simulation, showcasing skills in software development, problem-solving, and technology-driven solutions',
+    mainCertificate: {
+      title: 'Accenture UK - Developer and Technology Job Simulation',
+      issuer: 'Forage',
+      date: 'Jan 2025',
+      image: '/Accenture UK - Developer and Technology Job Simulation.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'Forage',
+        date: '',
+        image: '',
+      },
+    ],
+  },
   // Add more achievements as needed
 ]
 
