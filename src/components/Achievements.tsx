@@ -250,6 +250,42 @@ const achievements: Achievement[] = [
     ],
   },
   {
+    title: 'Data Visualisation: Empowering Business with Effective Insights Job Simulation (TATA Group)',
+    description: 'Certified in Data Visualization: Empowering Business with Effective Insights, demonstrating skills in creating impactful dashboards and data-driven decision-making.',
+    mainCertificate: {
+      title: 'Data Visualisation: Empowering Business with Effective Insights Job Simulation',
+      issuer: 'Forage',
+      date: 'Jan 2025',
+      image: '/Data Visualisation Empowering Business with Effective Insights Job Simulation.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'Forage',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Data Visualisation: Empowering Business with Effective Insights Job Simulation (TATA Group)',
+    description: 'Certified in Data Visualization: Empowering Business with Effective Insights, demonstrating skills in creating impactful dashboards and data-driven decision-making.',
+    mainCertificate: {
+      title: 'Data Visualisation: Empowering Business with Effective Insights Job Simulation',
+      issuer: 'Forage',
+      date: 'Jan 2025',
+      image: '/Data Visualisation Empowering Business with Effective Insights Job Simulation.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'Forage',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
     title: 'Accenture UK - Developer and Technology Job Simulation',
     description: 'Certified in Accenture UK - Developer and Technology Job Simulation, showcasing skills in software development, problem-solving, and technology-driven solutions',
     mainCertificate: {
