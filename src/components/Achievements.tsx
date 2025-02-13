@@ -345,6 +345,24 @@ const achievements: Achievement[] = [
       },
     ],
   },
+  {
+    title: 'AWS Technical Essentials',
+    description: 'Certified in AWS Technical Essentials, demonstrating proficiency in fundamental AWS concepts, including compute, database, storage, networking, monitoring, and security, along with common cloud solutions.',
+    mainCertificate: {
+      title: 'AWS Technical Essentials',
+      issuer: 'AWS Training and Certification',
+      date: 'Feb 2025',
+      image: '/AWS Technical Essentials.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'AWS Training and Certification',
+        date: '',
+        image: '',
+      },
+    ],
+  },
   // Add more achievements as needed
 ]
 
