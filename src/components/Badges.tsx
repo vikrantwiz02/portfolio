@@ -34,6 +34,13 @@ const badges: Badge[] = [
     company: 'Devfolio',
     image: '/skill-verified-backend.0c910c4b..png?height=400&width=200'
   },
+  {
+    id: '5',
+    name: 'AWS Cloud Quest: Cloud Practitioner',
+    company: 'AWS Training and Certification',
+    image: '/aws-cloud-quest-cloud-practitioner.png?height=400&width=200'
+  },
+  
   // Add more badges as needed
 ]
 

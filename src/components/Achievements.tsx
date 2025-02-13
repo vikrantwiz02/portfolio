@@ -232,42 +232,6 @@ const achievements: Achievement[] = [
     ],
   },
   {
-    title: 'AWS Cloud Practitioner Essentials',
-    description: 'Completed the AWS Cloud Practitioner Essentials certificate, covering foundational knowledge of AWS services, cloud concepts, pricing models, and security best practices.',
-    mainCertificate: {
-      title: 'AWS Cloud Practitioner Essentials',
-      issuer: 'AWS Training and Certification',
-      date: 'Jan 2025',
-      image: '/AWS Course Completion Certificate.jpg?height=200&width=300',
-    },
-    subCertificates: [
-      {
-        title: 'No Sub-Certificates',
-        issuer: 'AWS Training and Certification',
-        date: '',
-        image: '',
-      },
-    ],
-  },
-  {
-    title: 'Data Visualisation: Empowering Business with Effective Insights Job Simulation (TATA Group)',
-    description: 'Certified in Data Visualization: Empowering Business with Effective Insights, demonstrating skills in creating impactful dashboards and data-driven decision-making.',
-    mainCertificate: {
-      title: 'Data Visualisation: Empowering Business with Effective Insights Job Simulation',
-      issuer: 'Forage',
-      date: 'Jan 2025',
-      image: '/Data Visualisation Empowering Business with Effective Insights Job Simulation.png?height=200&width=300',
-    },
-    subCertificates: [
-      {
-        title: 'No Sub-Certificates',
-        issuer: 'Forage',
-        date: '',
-        image: '',
-      },
-    ],
-  },
-  {
     title: 'Data Visualisation: Empowering Business with Effective Insights Job Simulation (TATA Group)',
     description: 'Certified in Data Visualization: Empowering Business with Effective Insights, demonstrating skills in creating impactful dashboards and data-driven decision-making.',
     mainCertificate: {
@@ -300,6 +264,84 @@ const achievements: Achievement[] = [
         issuer: 'Forage',
         date: '',
         image: '',
+      },
+    ],
+  },
+  {
+    title: 'Goldman Sachs - Software Engineering Job Simulation',
+    description: 'Certified in Software Engineering Job Simulation, showcasing expertise in software development, problem-solving, and engineering best practices.',
+    mainCertificate: {
+      title: 'Goldman Sachs - Software Engineering Job Simulation',
+      issuer: 'Forage',
+      date: 'Feb 2025',
+      image: '/Software Engineering Job Simulation.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'Forage',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Citi - Technology Software Development Job Simulation',
+    description: 'Certified in Citi - Technology Software Development Job Simulation, demonstrating proficiency in creating state diagrams, writing feature proposals, querying data from the web, and visualizing live data.',
+    mainCertificate: {
+      title: 'Citi - Technology Software Development Job Simulation',
+      issuer: 'Forage',
+      date: 'Feb 2025',
+      image: '/Citi.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'No Sub-Certificates',
+        issuer: 'Forage',
+        date: '',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Cloud Essentials - Knowledge Badge Readiness Path',
+    description: 'Certified in Cloud Essentials - Knowledge Badge Readiness Path, demonstrating a strong foundation in AWS Cloud concepts, services, security, architecture, pricing, and support through structured learning, knowledge checks, and assessment.',
+    mainCertificate: {
+      title: 'Cloud Essentials - Knowledge Badge Readiness Path',
+      issuer: 'AWS Training and Certification',
+      date: 'Feb 2025',
+      image: '/Cloud Essentials - Knowledge Badge Readiness Path.png?height=200&width=300',
+    },
+    subCertificates: [
+      {
+        title: 'Job Roles in the Cloud',
+        issuer: 'AWS Training and Certification',
+        date: 'Feb 2025',
+        image: '/Job Roles in the Cloud.png?height=150&width=200',
+      },
+      {
+        title: 'AWS Cloud Practitioner Essentials',
+        issuer: 'AWS Training and Certification',
+        date: 'Jan 2025',
+        image: '/AWS Course Completion Certificate.png?height=150&width=200',
+      },
+      {
+        title: 'Getting Started with Cloud Acquisition',
+        issuer: 'AWS Training and Certification',
+        date: 'Feb 2025',
+        image: '/Getting Started with Cloud Acquisition.png?height=150&width=200',
+      },
+      {
+        title: 'AWS Billing and Cost Management',
+        issuer: 'AWS Training and Certification',
+        date: 'Feb 2025',
+        image: '/AWS Billing and Cost Management.png?height=150&width=200',
+      },
+      {
+        title: 'AWS Foundations: Getting Started with the AWS Cloud Essentials',
+        issuer: 'AWS Training and Certification',
+        date: 'Feb 2025',
+        image: '/AWS Foundations Getting Started with the AWS Cloud Essentials.png?height=150&width=200',
       },
     ],
   },
