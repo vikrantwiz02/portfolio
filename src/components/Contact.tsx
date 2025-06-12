@@ -1,10 +1,10 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline"
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, CheckCircleIcon } from "@heroicons/react/24/outline"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -13,6 +13,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 // Form validation schema
 const formSchema = z.object({
@@ -29,6 +30,7 @@ const formSchema = z.object({
 
 const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [showSuccessAlertCard, setShowSuccessAlertCard] = useState(false)
   const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -40,8 +42,19 @@ const Contact: React.FC = () => {
     },
   })
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout
+    if (showSuccessAlertCard) {
+      timer = setTimeout(() => {
+        setShowSuccessAlertCard(false)
+      }, 5000) // Hide after 5 seconds
+    }
+    return () => clearTimeout(timer)
+  }, [showSuccessAlertCard])
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true)
+    setShowSuccessAlertCard(false) // Reset alert visibility on new submission
 
     try {
       const response = await fetch("/api/send-email", {
@@ -56,16 +69,14 @@ const Contact: React.FC = () => {
 
       if (response.ok && result.success) {
         form.reset()
-        toast({
-          title: "Message Sent!",
-          description: "Your message has been sent successfully.",
-        })
+        setShowSuccessAlertCard(true) // Show the success alert card
       } else {
         throw new Error(result.error || "Failed to send message")
       }
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : "An unknown error occurred."
       toast({
+        // Still use toast for errors
         title: "Error",
         description: `There was an error sending your message: ${errorMessage}`,
         variant: "destructive",
@@ -81,6 +92,25 @@ const Contact: React.FC = () => {
       className="py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative"
     >
       <div className="container mx-auto px-4">
+        {showSuccessAlertCard && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-20 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4" // Positioned at the top
+          >
+            <Alert
+              variant="default"
+              className="bg-green-100 dark:bg-green-800 border-green-500 dark:border-green-600 text-green-700 dark:text-green-200"
+            >
+              <CheckCircleIcon className="h-5 w-5 text-green-500 dark:text-green-400" />
+              <AlertTitle className="font-semibold">Message Sent!</AlertTitle>
+              <AlertDescription>Your message has been sent successfully. We'll get back to you soon.</AlertDescription>
+            </Alert>
+          </motion.div>
+        )}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
