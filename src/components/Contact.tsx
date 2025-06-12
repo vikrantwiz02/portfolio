@@ -31,7 +31,6 @@ const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
   const { toast } = useToast()
 
-  // Initialize form with react-hook-form and zod
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -53,19 +52,22 @@ const Contact: React.FC = () => {
         body: JSON.stringify(values),
       })
 
-      if (response.ok) {
+      const result = await response.json()
+
+      if (response.ok && result.success) {
         form.reset()
         toast({
           title: "Message Sent!",
           description: "Your message has been sent successfully.",
         })
       } else {
-        throw new Error("Failed to send message")
+        throw new Error(result.error || "Failed to send message")
       }
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "An unknown error occurred."
       toast({
         title: "Error",
-        description: "There was an error sending your message. Please try again.",
+        description: `There was an error sending your message: ${errorMessage}`,
         variant: "destructive",
       })
     } finally {
@@ -85,7 +87,7 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <Card className="overflow-hidden shadow-lg max-w-mx">
+          <Card className="overflow-hidden shadow-lg">
             <CardHeader className="bg-primary text-primary-foreground p-6 md:p-10">
               <CardTitle className="text-3xl md:text-4xl font-bold text-center">Get in Touch</CardTitle>
             </CardHeader>
