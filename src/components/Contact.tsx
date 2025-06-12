@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -19,6 +19,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+import { XMarkIcon } from '@heroicons/react/24/solid'
 
 // Form validation schema
 const formSchema = z.object({
@@ -35,6 +36,7 @@ const formSchema = z.object({
 
 const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false)
   const { toast } = useToast()
 
   // Initialize form with react-hook-form and zod
@@ -60,12 +62,10 @@ const Contact: React.FC = () => {
       })
 
       if (response.ok) {
-        toast({
-          title: "Success!",
-          description: "Your message has been sent successfully.",
-          variant: "default",
-        })
         form.reset()
+        setShowSuccessAlert(true)
+        // Auto-hide the alert after 5 seconds
+        setTimeout(() => setShowSuccessAlert(false), 5000)
       } else {
         throw new Error('Failed to send message')
       }
@@ -81,7 +81,45 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <section id="contact" className="py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative">
+      {/* Success Alert */}
+      <AnimatePresence>
+        {showSuccessAlert && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4"
+          >
+            <div className="rounded-md bg-green-50 p-4 shadow-lg">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400" aria-hidden="true" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-green-800">
+                    Your message has been sent successfully!
+                  </p>
+                </div>
+                <div className="ml-auto pl-3">
+                  <div className="-mx-1.5 -my-1.5">
+                    <button
+                      type="button"
+                      className="inline-flex rounded-md bg-green-50 p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-50"
+                      onClick={() => setShowSuccessAlert(false)}
+                    >
+                      <span className="sr-only">Dismiss</span>
+                      <XMarkIcon className="h-5 w-5" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
