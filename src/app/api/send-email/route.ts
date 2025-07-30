@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 
 export async function POST(request: Request) {
-  // These variables are pulled from your Vercel project's environment variables.
+ 
   const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, SMTP_FROM_EMAIL, SMTP_FROM_NAME, CONTACT_RECIPIENT_EMAIL } =
     process.env
 
@@ -16,7 +16,6 @@ export async function POST(request: Request) {
     CONTACT_RECIPIENT_EMAIL,
   ]
 
-  // Check if all required environment variables are set
   if (requiredEnvVars.some((envVar) => !envVar)) {
     console.error("Missing one or more required SMTP environment variables")
     return NextResponse.json(
@@ -28,7 +27,6 @@ export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json()
 
-    // Basic validation for the request body
     if (!name || !email || !message) {
       return NextResponse.json(
         { success: false, error: "Missing name, email, or message in request body." },
@@ -39,17 +37,16 @@ export async function POST(request: Request) {
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
       port: Number(SMTP_PORT),
-      secure: Number(SMTP_PORT) === 465, // `secure` is true for port 465, false for others
+      secure: Number(SMTP_PORT) === 465, 
       auth: {
         user: SMTP_USER,
-        pass: SMTP_PASSWORD, // Use the app-specific password here
+        pass: SMTP_PASSWORD, 
       },
-      connectionTimeout: 10000, // 10 seconds
+      connectionTimeout: 10000, 
       greetingTimeout: 10000,
       socketTimeout: 10000,
     })
 
-    // Verify the connection to the SMTP server
     try {
       await transporter.verify()
     } catch (verifyError) {
@@ -63,7 +60,7 @@ export async function POST(request: Request) {
     const mailOptions = {
       from: `"${SMTP_FROM_NAME}" <${SMTP_FROM_EMAIL}>`,
       to: CONTACT_RECIPIENT_EMAIL,
-      replyTo: email, // Set the sender's email as the reply-to address
+      replyTo: email,
       subject: `New message from ${name} via Portfolio Contact Form`,
       text: `You have received a new message from your portfolio contact form:\n\nName: ${name}\nEmail: ${email}\nMessage:\n${message}`,
       html: `
@@ -79,7 +76,6 @@ export async function POST(request: Request) {
       `,
     }
 
-    // Send the email
     await transporter.sendMail(mailOptions)
     return NextResponse.json({ success: true, message: "Email sent successfully!" })
   } catch (error) {
