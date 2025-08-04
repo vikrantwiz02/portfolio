@@ -27,21 +27,12 @@ const projects = [
     type: 'web',
   },
   {
-    title: 'Kavach',
-    description: 'Kavach is a web application designed to address workplace sexual harassment by enabling users to lodge complaints, track their status in real-time, and send emergency SOS alerts with live location sharing. It aims to provide a safe, transparent, and supportive environment for individuals facing harassment in the workplace.',
-    image: '/kavach.png?height=200&width=300',
-    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
-    github: 'https://github.com/vikrantwiz02/KAVACH',
-    live: 'https://drive.google.com/file/d/1YVGRA76clSaDif01R5Vq9LlGIXgC5mLH/view?usp=sharing',
-    type: 'web',
-  },
-  {
     title: 'Saviour2.0',
     description: 'Saviour is a technology-driven solution designed to save lives during natural disasters. It features real-time alerts, navigation assistance, resource availability tracking, user-to-user support, and offline communication. By integrating weather forecasting and innovative technologies, Saviour ensures timely information and aid to those in need, enhancing disaster preparedness and response.',
     image: '/Saviour2.png?height=200&width=300',
     tags: ['TypeScript', 'JavaScript', 'Tailwind CSS','React.js','MongoDB'],
     github: 'https://github.com/vikrantwiz02/Saviour2',
-    live: 'https://saviour-chi.vercel.app/',
+    live: 'https://saviour-ten.vercel.app/',
     type: 'web',
   },
   {
