@@ -12,30 +12,24 @@ interface Badge {
 const badges: Badge[] = [
   {
     id: '1',
-    name: 'Google Cybersecurity Professional',
-    company: 'Coursera',
-    image: '/google-cybersecurity-certificate.png?height=400&width=200'
-  },
-  {
-    id: '2',
     name: 'Google IT Support Professional',
     company: 'Coursera',
     image: '/google-it-support-professional-certificate.2.png?height=400&width=200'
   },
   {
-    id: '3',
+    id: '2',
     name: 'Frontend Developer',
     company: 'Devfolio',
     image: '/skill-verified-frontend.b9559f3f..png?height=400&width=200'
   },
   {
-    id: '4',
+    id: '3',
     name: 'Backend Developer',
     company: 'Devfolio',
     image: '/skill-verified-backend.0c910c4b..png?height=400&width=200'
   },
   {
-    id: '5',
+    id: '4',
     name: 'AWS Cloud Quest: Cloud Practitioner',
     company: 'AWS Training and Certification',
     image: '/aws-cloud-quest-cloud-practitioner.png?height=400&width=200'

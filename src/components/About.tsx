@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Code, Shield, GraduationCap } from 'lucide-react'
+import { Code, GraduationCap } from 'lucide-react'
 import Image from 'next/image'; // Import Image from next/image
 
 const About: React.FC = () => {
@@ -34,11 +34,10 @@ const About: React.FC = () => {
             </motion.div>
             <div className="flex-1 space-y-6">
               <p className="text-lg text-center lg:text-left">
-                I am a dedicated Web Developer with a growing interest and developing expertise in Cybersecurity. 
-                Currently, I am in the learning phase, building skills to integrate secure practices into modern web applications. 
+                I am a dedicated Web Developer passionate about creating modern web applications. 
                 As a 2nd-year Computer Science and Engineering student, I&apos;m committed to continuous improvement and staying ahead in the tech landscape.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="bg-blue-500/10 border-blue-500">
                   <CardHeader>
                     <CardTitle className="flex items-center text-blue-500">
@@ -49,17 +48,7 @@ const About: React.FC = () => {
                     <p>Experience with HTML, CSS, JavaScript, and learning React.js, TypeScript, and Tailwind CSS.</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-purple-500/10 border-purple-500">
-                  <CardHeader>
-                    <CardTitle className="flex items-center text-purple-500">
-                      <Shield className="mr-2" /> Cybersecurity
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent> {/* Corrected here */}
-                    <p>Completed Google Cybersecurity Professional Certificate. Skills in Python, Linux, SQL, SIEM tools, and IDS.</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-green-500/ 10 border-green-500">
+                <Card className="bg-green-500/10 border-green-500">
                   <CardHeader>
                     <CardTitle className="flex items-center text-green-500">
                       <GraduationCap className="mr-2" /> Goals
@@ -67,7 +56,7 @@ const About: React.FC = () => {
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside">
-                      <li>Combine web development and cybersecurity</li>
+                      <li>Build innovative web applications</li>
                       <li>Continuous learning and growth</li>
                       <li>Connect with tech professionals</li>
                     </ul>

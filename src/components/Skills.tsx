@@ -2,16 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Code, Shield } from 'lucide-react'
+import { Code } from 'lucide-react'
 
 const webDevSkills = [
   'HTML', 'CSS', 'PHP', 'JavaScript', 'ReactJS', 'TypeScript', 'Tailwind CSS',
-  'Node.js', 'Git', 'MySQL'
-]
-
-const cyberSecuritySkills = [
-  'Python', 'Linux', 'SQL', 'SIEM tools', 'IDS', 'Network Security',
-  'Penetration Testing', 'Cryptography', 'Risk Assessment', 'Incident Response', 'Firewall Configuration', 'Vulnerability Analysis'
+  'Node.js', 'Git', 'MySQL', 'Python', 'Linux', 'SQL'
 ]
 
 const SkillCategory: React.FC<{ title: string; icon: React.ReactNode; skills: string[] }> = ({ title, icon, skills }) => (
@@ -49,20 +44,14 @@ const Skills: React.FC = () => {
       <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-gradient">
         Skills
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="flex justify-center">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="w-full max-w-3xl"
         >
           <SkillCategory title="Web Development" icon={<Code className="text-blue-500" />} skills={webDevSkills} />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <SkillCategory title="Cybersecurity" icon={<Shield className="text-purple-500" />} skills={cyberSecuritySkills} />
         </motion.div>
       </div>
     </section>

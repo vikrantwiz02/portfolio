@@ -8,6 +8,25 @@ import { Button } from '@/components/ui/button'
 import { Github, ExternalLink, Code, Shield } from 'lucide-react'
 
 const projects = [
+    {
+    title: 'ORSI Conference 2026',
+    description: 'Official website for the ORSI Conference 2026',
+    image: '/orsi-conference.png?height=200&width=300',
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS','Next.js'],
+    github: 'https://github.com/vikrantwiz02/ORSI-2026',
+    live: 'https://orsiconference.org/',
+    type: 'web',
+  },
+    {
+    title: 'IIITDMJ Unofficial Website',
+    description: 'The IIITDMJ Unofficial Website is a fully responsive, full-stack project covering frontend, backend, and database storage. Designed to provide key insights into academics, campus life, and events, this independent platform ensures seamless accessibility and engagement for students and aspirants.',
+    image: '/iiitdmj-website.png?height=200&width=300',
+    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS','Next.js','MongoDB','Clerk'],
+    github: 'https://github.com/vikrantwiz02/iiitdmj-website',
+    live: 'https://iiitdmj-ten.vercel.app/',
+    type: 'web',
+  },
+
   {
     title: 'Army Arms Management System',
     description: 'The Army Arms Management System (AAMS) streamlines the tracking, storage, and distribution of weapons, ammunition, and military equipment. It ensures accurate inventory, improves security, and optimizes logistics, supporting operational efficiency and readiness.',
@@ -19,15 +38,6 @@ const projects = [
   },
   {
     title: 'Saviour',
-    description: 'Saviour is a technology-driven solution designed to save lives during natural disasters. It features real-time alerts, navigation assistance, resource availability tracking, user-to-user support, and offline communication. By integrating weather forecasting and innovative technologies, Saviour ensures timely information and aid to those in need, enhancing disaster preparedness and response.',
-    image: '/Saviour.png?height=200&width=300',
-    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
-    github: 'https://github.com/vikrantwiz02/SAVIOUR',
-    live: 'https://drive.google.com/file/d/11MtDJCIcEl4Fgp5eM4wybGQ0oZBjyUvH/view?usp=sharing',
-    type: 'web',
-  },
-  {
-    title: 'Saviour2.0',
     description: 'Saviour is a technology-driven solution designed to save lives during natural disasters. It features real-time alerts, navigation assistance, resource availability tracking, user-to-user support, and offline communication. By integrating weather forecasting and innovative technologies, Saviour ensures timely information and aid to those in need, enhancing disaster preparedness and response.',
     image: '/Saviour2.png?height=200&width=300',
     tags: ['TypeScript', 'JavaScript', 'Tailwind CSS','React.js','MongoDB'],
@@ -51,15 +61,6 @@ const projects = [
     tags: ['TypeScript', 'JavaScript', 'Tailwind CSS'],
     github: 'https://github.com/vikrantwiz02/Magic-Form-Builder',
     live: '',
-    type: 'web',
-  },
-  {
-    title: 'IIITDMJ Unofficial Website',
-    description: 'The IIITDMJ Unofficial Website is a fully responsive, full-stack project covering frontend, backend, and database storage. Designed to provide key insights into academics, campus life, and events, this independent platform ensures seamless accessibility and engagement for students and aspirants.',
-    image: '/iiitdmj-website.png?height=200&width=300',
-    tags: ['TypeScript', 'JavaScript', 'Tailwind CSS','Next.js','MongoDB','Clerk'],
-    github: 'https://github.com/vikrantwiz02/iiitdmj-website',
-    live: 'https://iiitdmj-ten.vercel.app/',
     type: 'web',
   },
   {
