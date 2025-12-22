@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Web Developer & Cybersecurity Enthusiast
+          Full Stack Developer
         </motion.p>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
